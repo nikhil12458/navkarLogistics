@@ -4,7 +4,7 @@ import { config } from "../config/config.js";
 const auth = new google.auth.JWT(
   config.GOOGLE_CLIENT_EMAIL,
   null,
-  config.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+  (config.GOOGLE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
   ["https://www.googleapis.com/auth/spreadsheets"],
 );
 
