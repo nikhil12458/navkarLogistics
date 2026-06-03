@@ -3,8 +3,21 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
+import {useLead} from "../features/leads/hook/useLead.js"
 
 const ContactPage = () => {
+    const {handleLeadCallback} = useLead();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleLeadCallback({
+            firstName: e.target.firstName.value,
+            lastName: e.target.lastName.value,
+            emailAddress: e.target.emailAddress.value,
+            phoneNumber: e.target.phoneNumber.value,
+            yourRequirements: e.target.yourRequirements.value,
+        })
+        e.target.reset();
+    }
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="bg-[#001b3a] pt-20 pb-12 text-white text-center">
@@ -93,31 +106,31 @@ const ContactPage = () => {
                   <h2 className="text-3xl font-bold text-[#001b3a] mb-2">Request a Callback</h2>
                   <p className="text-slate-500 mb-8">Fill out the form below and our logistics experts will get back to you shortly.</p>
                   
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-slate-700">First Name</label>
-                        <input type="text" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="John" />
+                        <input name="firstName" type="text" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="John" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-slate-700">Last Name</label>
-                        <input type="text" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="Doe" />
+                        <input name="lastName" type="text" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="Doe" />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-slate-700">Email Address</label>
-                      <input type="email" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="john@example.com" />
+                      <input name="emailAddress" type="email" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="john@example.com" />
                     </div>
 
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-slate-700">Phone Number</label>
-                      <input type="tel" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="+91 98765 43210" />
+                      <input name="phoneNumber" type="tel" className="w-full h-12 px-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322]" placeholder="+91 98765 43210" />
                     </div>
                     
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-slate-700">Your Requirements</label>
-                      <textarea className="w-full p-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322] min-h-[150px]" placeholder="Tell us about your freight needs, container requirements, etc..."></textarea>
+                      <textarea name="yourRequirements" className="w-full p-4 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#f16322]/50 focus:border-[#f16322] min-h-[150px]" placeholder="Tell us about your freight needs, container requirements, etc..."></textarea>
                     </div>
                     
                     <Button className="w-full h-14 text-lg font-semibold bg-[#001b3a] hover:bg-[#001b3a]/90 text-white rounded-xl">
