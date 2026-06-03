@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const leadApiInstance = axios.create({
-  baseURL: "http://localhost:3000",
+//   baseURL: "http://localhost:3000",
+  baseURL: "https://navkarlogistics-production.up.railway.app",
   withCredentials: true,
 });
 
