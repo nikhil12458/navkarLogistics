@@ -22,7 +22,7 @@ const Fleet = ({ hideLink = false }) => {
             </p>
             
             <ul className="space-y-4 mb-10">
-              {["Over 10,000 active vehicles", "IoT-enabled real-time tracking", "Automated sorting at all major hubs", "Eco-friendly operational practices", "Dedicated 32 FT Container Fleet"].map((item, i) => (
+              {["Over 150 active vehicles", "IoT-enabled real-time tracking", "Automated sorting at all major hubs", "Eco-friendly operational practices", "Dedicated 32 FT Container Fleet"].map((item, i) => (
                 <li key={i} className="flex items-center text-slate-700 font-medium">
                   <div className="w-2 h-2 rounded-full bg-[#f16322] mr-3" />
                   {item}

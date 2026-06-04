@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: [
-      "https://navkar-logistics-iota.vercel.app",
+      "https://navkarlogistics.vercel.app",
       "http://localhost:5173",
       "http://localhost:3000",
     ],

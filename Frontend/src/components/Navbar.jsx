@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-2">
             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#001b3a] text-white font-bold text-xl">
-              N<span className="text-[#f16322]">A</span>
+              N<span className="text-[#f16322]">L</span>
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-black text-[#001b3a] leading-none tracking-tight">NAVKAR</span>
