@@ -4,7 +4,7 @@ export const leadValidationRules = [
   body("firstName").trim().notEmpty().withMessage("First name is required"),
   body("lastName").trim().notEmpty().withMessage("Last name is required"),
   body("emailAddress").isEmail().withMessage("Valid email is required"),
-  body("phoneNumber").trim().notEmpty().withMessage("Phone number is required"),
+  body("phoneNumber").trim().isMobilePhone().notEmpty().withMessage("Phone number is required"),
   body("yourRequirements").trim().notEmpty().withMessage("Requirements are required")
 ];
 
