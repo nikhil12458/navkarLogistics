@@ -44,7 +44,7 @@ export async function appendLead({
     requestBody: {
       values: [
         [
-          new Date().toLocaleString(),
+          new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
           firstName,
           lastName,
           emailAddress,
