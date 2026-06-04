@@ -7,6 +7,7 @@ const Services = React.lazy(() => import('../components/home/Services'));
 const WhyChooseUs = React.lazy(() => import('../components/home/WhyChooseUs'));
 const Fleet = React.lazy(() => import('../components/home/Fleet'));
 const Testimonials = React.lazy(() => import('../components/home/Testimonials'));
+const OwnerProfile = React.lazy(() => import('../components/OwnerProfile'));
 
 const SectionLoader = () => (
   <div className="w-full py-20 flex justify-center items-center">
@@ -30,6 +31,10 @@ const HomePage = () => {
       
       <Suspense fallback={<SectionLoader />}>
         <Fleet />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <OwnerProfile />
       </Suspense>
       
       <Suspense fallback={<SectionLoader />}>

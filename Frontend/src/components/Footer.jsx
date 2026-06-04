@@ -28,8 +28,8 @@ const Footer = () => {
                 <div className="mt-1 bg-white/10 p-2 rounded-full"><Phone className="w-4 h-4 text-[#f16322]" /></div>
                 <div>
                   <p className="font-semibold text-white">Devender</p>
-                  <p>7988564717</p>
                   <p>9817764717</p>
+                  <p>7988564717</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
@@ -47,6 +47,7 @@ const Footer = () => {
                 <div>
                   <p>Village Sidharwali, Near Rao Lal Singh Collage</p>
                   <p>Bilaspur Chowk</p>
+                  <p>Gurugram</p>
                   <p>Pin : 122413</p>
                 </div>
               </li>
