@@ -16,11 +16,11 @@ const auth = new google.auth.GoogleAuth({
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
-console.log("Google Sheets Config:", {
-  email: config.GOOGLE_CLIENT_EMAIL,
-  hasKey: !!config.GOOGLE_PRIVATE_KEY,
-  sheetId: config.GOOGLE_SHEET_ID,
-});
+// console.log("Google Sheets Config:", {
+//   email: config.GOOGLE_CLIENT_EMAIL,
+//   hasKey: !!config.GOOGLE_PRIVATE_KEY,
+//   sheetId: config.GOOGLE_SHEET_ID,
+// });
 
 export async function appendLead({
   firstName,

@@ -1,4 +1,5 @@
 import { leadService } from "../service/lead.service.js";
+import { toast } from "react-toastify";
 
 export const useLead = () => {
   async function handleLeadCallback({
@@ -18,9 +19,13 @@ export const useLead = () => {
         yourRequirements,
       });
       console.log("Lead Response:", response.data);
-      return response;
+      toast.success("Request sent successfully! We will get back to you shortly.");
+      return true;
     } catch (error) {
       console.error("Lead Error:", error);
+      const errorMessage = error.response?.data?.message || error.response?.data?.errors?.[0]?.msg || "Something went wrong. Please try again later.";
+      toast.error(errorMessage);
+      return false;
     }
   }
 
