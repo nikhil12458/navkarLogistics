@@ -16,7 +16,7 @@ const OwnerProfile = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 relative rounded-full overflow-hidden border-8 border-white shadow-xl">
               <img 
                 src="https://ik.imagekit.io/uvpva42cs/second-brain-images/ChatGPT%20Image%20Jun%204,%202026,%2011_17_32%20AM.png" 
-                alt="Devender - Founder of Navkar Logistics" 
+                alt="Nerander - Founder of Navkar Logistics" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -32,7 +32,7 @@ const OwnerProfile = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f16322]/10 text-[#f16322] font-semibold text-sm mb-4">
               Meet Our Founder
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#001b3a] mb-2">Devender</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#001b3a] mb-2">Nerander</h2>
             <p className="text-lg font-medium text-slate-500 mb-6">Founder & CEO, Navkar Logistics</p>
             
             <p className="text-slate-600 leading-relaxed mb-6 text-lg">
