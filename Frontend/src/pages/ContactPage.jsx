@@ -71,7 +71,7 @@ const ContactPage = () => {
                       Contact Numbers
                     </p>
                     <p className="text-[#001b3a] font-medium">
-                      Nerander: +91 9817764717
+                      Nerender: +91 9817764717
                     </p>
                     <p className="text-[#001b3a] font-medium">+91 7988564717</p>
                   </div>

@@ -27,7 +27,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <div className="mt-1 bg-white/10 p-2 rounded-full"><Phone className="w-4 h-4 text-[#f16322]" /></div>
                 <div>
-                  <p className="font-semibold text-white">Nerander</p>
+                  <p className="font-semibold text-white">Nerender</p>
                   <p>9817764717</p>
                   <p>7988564717</p>
                 </div>
